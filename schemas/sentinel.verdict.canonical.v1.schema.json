@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/composed-evaluators/verdict-envelope/schemas/sentinel.verdict.canonical.v1.schema.json",
+  "title": "ThoughtProof Sentinel Canonical Verdict Body (v1)",
+  "description": "Byte-deterministic (JCS / RFC 8785) projection of a ThoughtProof Sentinel verify response. This is the exact artifact ThoughtProof hands to invinoveritas for anchoring. A third party can recompute sha256 over the JCS serialization of these fields and match the anchored body_hash without trusting either party. Source of truth: thoughtproof-sentinel/src/canonical-verdict.ts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifactSchema",
+    "verificationId",
+    "apiVersion",
+    "tier",
+    "mode",
+    "verdict",
+    "confidence",
+    "objections",
+    "reasoning",
+    "evaluatedAt",
+    "models"
+  ],
+  "properties": {
+    "artifactSchema": {
+      "type": "string",
+      "const": "sentinel.verdict.canonical.v1",
+      "description": "Schema identity. Distinguishes Sentinel verdicts from plv.verdict.canonical.v1 etc."
+    },
+    "verificationId": {
+      "type": "string",
+      "description": "Stable Sentinel verification id (matches response.id). Use as the attributed key."
+    },
+    "apiVersion": {
+      "type": "string",
+      "description": "Sentinel API body-shape version. Bump if the canonical body shape changes."
+    },
+    "tier": {
+      "type": "string",
+      "description": "Verification tier.",
+      "examples": ["checkpoint", "standard", "swift", "pro"]
+    },
+    "mode": {
+      "type": "string",
+      "description": "Verification mode.",
+      "examples": ["trade_execution", "trade_reasoning", "action_authorization"]
+    },
+    "verdict": {
+      "type": "string",
+      "enum": ["ALLOW", "BLOCK", "UNCERTAIN"],
+      "description": "The public judgment itself."
+    },
+    "confidence": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Aggregate confidence as a 0-100 integer. NOTE: the live API response uses a 0-1 float; the canonical body uses 0-100 int (round(response.confidence * 100), clamped)."
+    },
+    "objections": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Material objections, each mapped deterministically as \"${step_id}: ${reasoning}\". May be empty."
+    },
+    "reasoning": {
+      "type": "string",
+      "description": "Human-readable rationale. Empty string when absent (never null)."
+    },
+    "evaluatedAt": {
+      "type": "integer",
+      "description": "Unix seconds, floor(Date(meta.verified_at)/1000)."
+    },
+    "models": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primary"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "First evaluator model (e.g. serv-nano)."
+        },
+        "secondary": {
+          "type": "string",
+          "description": "Second evaluator if the cascade escalated (e.g. serv-swift). OMITTED ENTIRELY for solo tiers — never null."
+        }
+      }
+    },
+    "gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "wouldBlock", "enforced", "violations"],
+      "description": "Deterministic-gate result. Present ONLY for mode=action_authorization with a mandate. OMITTED ENTIRELY otherwise — never null (JCS treats absent vs null distinctly).",
+      "properties": {
+        "mode": { "type": "string", "enum": ["shadow", "enforce"] },
+        "wouldBlock": { "type": "boolean" },
+        "enforced": { "type": "boolean" },
+        "violations": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "$comment": "JCS DETERMINISM RULE (load-bearing for hash recomputability): optional fields (models.secondary, gate) are omitted entirely when absent, never set to null. Serialize via RFC 8785 JCS, then sha256. See canonical.json for a matching sample and its hash in README."
+}
