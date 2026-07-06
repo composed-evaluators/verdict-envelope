@@ -100,7 +100,7 @@ ThoughtProof never calls invinoveritas's judgment path; invinoveritas never call
 - [x] Canonical body schema + byte-exact sample committed (code-verified against `canonical-verdict.ts`).
 - [x] `/witness` + `/verify-proof` live and reachable.
 - [x] Live-Sentinel body (real `verificationId`) — see [`samples/live-sentinel-verdict.json`](samples/live-sentinel-verdict.json), produced by a real `POST /sentinel/verify` and canonicalized by ThoughtProof's `buildCanonicalSentinelVerdict()`. Recompute: `sha256` over its `jcs` field equals its `body_hash` (`0x27f0accb…`).
-- [ ] End-to-end witness round-trip: hand `samples/live-sentinel-verdict.json`'s `jcs` to invinoveritas `POST /witness` (pending funding-path decision — 100 sats, invinoveritas's endpoint/key).
+- [x] End-to-end witness round-trip — fired (2026-07-06, invinoveritas side, 100 sats): `samples/live-sentinel-verdict.json`'s `jcs` handed to `POST /witness` as `{source: "sentinel.thoughtproof.ai", body: <jcs>}`. Signed proof event id `98a2d71a22a045825d431bc3c315953992c093f0b8c818a2f195116537557529`, returned `body_hash` `27f0accb9d5b02afbbc673b5d1adbf646a002220bece6b3d1fe764504074a84b` (matches). Independently confirmed valid via `POST /verify-proof` (`id_integrity`/`signature_valid`/`issued_by_invinoveritas` all `true`) — see [`samples/witness-proof.json`](samples/witness-proof.json) for the full signed event, recomputable by anyone via NIP-01.
 
 ---
 
