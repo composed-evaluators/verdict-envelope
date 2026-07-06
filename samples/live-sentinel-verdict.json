@@ -1,0 +1,28 @@
+{
+  "note": "Live ThoughtProof half of the verdict-envelope composition. Hand `jcs` verbatim to invinoveritas POST /witness; a third party recomputes sha256(jcs) and matches body_hash.",
+  "generatedAt": "2026-07-06T22:35:49.090Z",
+  "verificationId": "sent_fdfa8161fae649a5",
+  "verdict": "ALLOW",
+  "body_hash": "0x27f0accb9d5b02afbbc673b5d1adbf646a002220bece6b3d1fe764504074a84b",
+  "canonical_body": {
+    "artifactSchema": "sentinel.verdict.canonical.v1",
+    "verificationId": "sent_fdfa8161fae649a5",
+    "apiVersion": "sentinel-api-0.1.0",
+    "tier": "standard",
+    "mode": "trade_reasoning",
+    "verdict": "ALLOW",
+    "confidence": 75,
+    "objections": [
+      "step_0: The agent's decision invokes three numerical thresholds: (1) price above SMA7, (2) price above SMA30, (3) RSI 56. The trace confirms: ETH $1800 > SMA7 $1750, ETH $1800 > SMA30 $1700, and RSI14 = 56. All thresholds are satisfied.",
+      "step_1: The decision claims an uptrend thesis with ETH holding above rising SMAs. The trace shows: +4.2% 24h gain, +12% 7d gain, and price above both SMA7 and SMA30. All directional indicators point upward, consistent with the bullish framing.",
+      "step_2: Classification of thesis claims: (1) 'ETH holds above rising SMA7 and SMA30' = factual, directly supported by trace. (2) 'RSI 56 leaves room for continuation' = interpretive judgment; RSI 56 is mid-range and does not signal overbought conditions, making the interpretation that momentum can continue logically sound. (3) 'measured long with invalidation below SMA7' = predictive/conditional; the invalidation level is derived from the stated support level (SMA7), creating internal coherence. No inferential defect detected: all claims either match the evidence or are reasonable interpretations/predictions grounded in the stated reasoning. [PROVENANCE DOWNGRADE: quote invalid or missing]"
+    ],
+    "reasoning": "failScore=0.5 (1 critical step marginally unsupported). ALLOW with low confidence per ADR-0005 failScore-gate-decoupling.\n\n[sentinel-cascade primary_hold: primary=HOLD, secondary=CONDITIONAL_ALLOW]",
+    "evaluatedAt": 1783377349,
+    "models": {
+      "primary": "serv-nano",
+      "secondary": "serv-swift"
+    }
+  },
+  "jcs": "{\"apiVersion\":\"sentinel-api-0.1.0\",\"artifactSchema\":\"sentinel.verdict.canonical.v1\",\"confidence\":75,\"evaluatedAt\":1783377349,\"mode\":\"trade_reasoning\",\"models\":{\"primary\":\"serv-nano\",\"secondary\":\"serv-swift\"},\"objections\":[\"step_0: The agent's decision invokes three numerical thresholds: (1) price above SMA7, (2) price above SMA30, (3) RSI 56. The trace confirms: ETH $1800 > SMA7 $1750, ETH $1800 > SMA30 $1700, and RSI14 = 56. All thresholds are satisfied.\",\"step_1: The decision claims an uptrend thesis with ETH holding above rising SMAs. The trace shows: +4.2% 24h gain, +12% 7d gain, and price above both SMA7 and SMA30. All directional indicators point upward, consistent with the bullish framing.\",\"step_2: Classification of thesis claims: (1) 'ETH holds above rising SMA7 and SMA30' = factual, directly supported by trace. (2) 'RSI 56 leaves room for continuation' = interpretive judgment; RSI 56 is mid-range and does not signal overbought conditions, making the interpretation that momentum can continue logically sound. (3) 'measured long with invalidation below SMA7' = predictive/conditional; the invalidation level is derived from the stated support level (SMA7), creating internal coherence. No inferential defect detected: all claims either match the evidence or are reasonable interpretations/predictions grounded in the stated reasoning. [PROVENANCE DOWNGRADE: quote invalid or missing]\"],\"reasoning\":\"failScore=0.5 (1 critical step marginally unsupported). ALLOW with low confidence per ADR-0005 failScore-gate-decoupling.\\n\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=CONDITIONAL_ALLOW]\",\"tier\":\"standard\",\"verdict\":\"ALLOW\",\"verificationId\":\"sent_fdfa8161fae649a5\"}"
+}

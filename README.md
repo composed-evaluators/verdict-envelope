@@ -99,8 +99,8 @@ ThoughtProof never calls invinoveritas's judgment path; invinoveritas never call
 
 - [x] Canonical body schema + byte-exact sample committed (code-verified against `canonical-verdict.ts`).
 - [x] `/witness` + `/verify-proof` live and reachable.
-- [ ] End-to-end witness round-trip on the shared demo body (pending funding-path decision).
-- [ ] Live-Sentinel body (real `verificationId`) instead of the fixture sample.
+- [x] Live-Sentinel body (real `verificationId`) — see [`samples/live-sentinel-verdict.json`](samples/live-sentinel-verdict.json), produced by a real `POST /sentinel/verify` and canonicalized by ThoughtProof's `buildCanonicalSentinelVerdict()`. Recompute: `sha256` over its `jcs` field equals its `body_hash` (`0x27f0accb…`).
+- [ ] End-to-end witness round-trip: hand `samples/live-sentinel-verdict.json`'s `jcs` to invinoveritas `POST /witness` (pending funding-path decision — 100 sats, invinoveritas's endpoint/key).
 
 ---
 
