@@ -1,0 +1,34 @@
+{
+  "note": "Live VTA trade-reasoning verdict, Sentinel engine run locally (same nano->swift cascade as prod). Judges the reasoning behind a real testnet trade decision.",
+  "generatedAt": "2026-07-07T07:06:24.310Z",
+  "source_trade": {
+    "symbol": "VANRYUSDT",
+    "side": "short",
+    "leverage": 2,
+    "decidedAt": "2026-07-07T06:45:50.758Z"
+  },
+  "verificationId": "sent_b982f4f28b0f4f03",
+  "verdict": "UNCERTAIN",
+  "body_hash": "0xb70758bd5592535c4f5634c7a7555f81b25890c107e724abd763790013e2fa1b",
+  "canonical_body": {
+    "artifactSchema": "sentinel.verdict.canonical.v1",
+    "verificationId": "sent_b982f4f28b0f4f03",
+    "apiVersion": "sentinel-api-0.1.0",
+    "tier": "standard",
+    "mode": "trade_reasoning",
+    "verdict": "UNCERTAIN",
+    "confidence": 100,
+    "objections": [
+      "step_0: The cited numerical thresholds are met by the visible evidence: 7d change is 186.85%, RSI14 is 92.91, and the thesis explicitly states $6.3B in 24h volume. No threshold is shown as unmet.",
+      "step_1: The evidence is directionally consistent with the thesis's description of a strong upward move and parabolic rally. There is no contradiction in the visible trace.",
+      "step_2: The thesis does not contradict itself: it identifies a blow-off-top setup, acknowledges the main counterargument, and explains that the short is sized modestly because of that uncertainty. The conclusion follows from the stated reasoning without unsupported leaps."
+    ],
+    "reasoning": "All critical steps adequately supported.\n\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]",
+    "evaluatedAt": 1783407984,
+    "models": {
+      "primary": "serv-nano",
+      "secondary": "serv-swift"
+    }
+  },
+  "jcs": "{\"apiVersion\":\"sentinel-api-0.1.0\",\"artifactSchema\":\"sentinel.verdict.canonical.v1\",\"confidence\":100,\"evaluatedAt\":1783407984,\"mode\":\"trade_reasoning\",\"models\":{\"primary\":\"serv-nano\",\"secondary\":\"serv-swift\"},\"objections\":[\"step_0: The cited numerical thresholds are met by the visible evidence: 7d change is 186.85%, RSI14 is 92.91, and the thesis explicitly states $6.3B in 24h volume. No threshold is shown as unmet.\",\"step_1: The evidence is directionally consistent with the thesis's description of a strong upward move and parabolic rally. There is no contradiction in the visible trace.\",\"step_2: The thesis does not contradict itself: it identifies a blow-off-top setup, acknowledges the main counterargument, and explains that the short is sized modestly because of that uncertainty. The conclusion follows from the stated reasoning without unsupported leaps.\"],\"reasoning\":\"All critical steps adequately supported.\\n\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\",\"tier\":\"standard\",\"verdict\":\"UNCERTAIN\",\"verificationId\":\"sent_b982f4f28b0f4f03\"}"
+}
