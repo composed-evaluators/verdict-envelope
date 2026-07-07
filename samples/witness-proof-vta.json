@@ -1,0 +1,54 @@
+{
+    "status": "success",
+    "price_sats": 100,
+    "proof_payload": {
+        "schema": "invinoveritas.witnessed_claim.v1",
+        "platform": "invinoveritas",
+        "source": "sentinel.thoughtproof.ai",
+        "body": "{\"apiVersion\":\"sentinel-api-0.1.0\",\"artifactSchema\":\"sentinel.verdict.canonical.v1\",\"confidence\":100,\"evaluatedAt\":1783407984,\"mode\":\"trade_reasoning\",\"models\":{\"primary\":\"serv-nano\",\"secondary\":\"serv-swift\"},\"objections\":[\"step_0: The cited numerical thresholds are met by the visible evidence: 7d change is 186.85%, RSI14 is 92.91, and the thesis explicitly states $6.3B in 24h volume. No threshold is shown as unmet.\",\"step_1: The evidence is directionally consistent with the thesis's description of a strong upward move and parabolic rally. There is no contradiction in the visible trace.\",\"step_2: The thesis does not contradict itself: it identifies a blow-off-top setup, acknowledges the main counterargument, and explains that the short is sized modestly because of that uncertainty. The conclusion follows from the stated reasoning without unsupported leaps.\"],\"reasoning\":\"All critical steps adequately supported.\\n\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\",\"tier\":\"standard\",\"verdict\":\"UNCERTAIN\",\"verificationId\":\"sent_b982f4f28b0f4f03\"}",
+        "body_hash": "b70758bd5592535c4f5634c7a7555f81b25890c107e724abd763790013e2fa1b",
+        "source_verification_note": "source is self-declared by the caller who submitted this body, NOT cryptographically verified by invinoveritas. This proof establishes WHEN this exact body was received and anchored, and WHAT it contains, byte-for-byte \u2014 it does not establish WHO actually authored it, and it carries no invinoveritas judgment about whether the content is sound.",
+        "witnessed_at": 1783408296,
+        "verify_url": "https://api.babyblueviper.com/verify-proof",
+        "verifier_pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "verify_offline": "npm i invinoveritas-verify  \u00b7  pip install invinoveritas-verify  \u2014 recompute this proof on your own machine against verifier_pubkey; you never have to call us.",
+        "independent_nodes": [
+            "https://invinoveritas-castra.babyblueviper.workers.dev/verify",
+            "https://babyblueviper1--2aba75da693711f185891607ee4eb77e.web.val.run"
+        ],
+        "verify_how": "Easiest: install the offline verifier above and recompute locally. Or POST this proof's signed `event` to verify_url (or an independent_node), OR run NIP-01 yourself: recompute the Nostr event id = sha256([0,pubkey,created_at,kind,tags,content]), verify the schnorr signature against verifier_pubkey. valid \u21d2 invinoveritas issued this, untampered. No trust required.",
+        "key_id": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "verifier_keys": "https://api.babyblueviper.com/.well-known/verifier-keys.json",
+        "conformance_suite": "https://github.com/babyblueviper1/preaction-governance-conformance"
+    },
+    "signature_type": "nostr_event",
+    "event": {
+        "id": "caf1dd62a4634ab84d555d365b626d7e752b3853e88ac5a701249e87191d215c",
+        "pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "created_at": 1783408296,
+        "kind": 30078,
+        "tags": [
+            [
+                "d",
+                "invinoveritas-proof-proof-1783408296-9ade143b"
+            ],
+            [
+                "t",
+                "invinoveritas"
+            ],
+            [
+                "t",
+                "proof"
+            ],
+            [
+                "schema",
+                "invinoveritas.witnessed_claim.v1"
+            ]
+        ],
+        "content": "{\"body\":\"{\\\"apiVersion\\\":\\\"sentinel-api-0.1.0\\\",\\\"artifactSchema\\\":\\\"sentinel.verdict.canonical.v1\\\",\\\"confidence\\\":100,\\\"evaluatedAt\\\":1783407984,\\\"mode\\\":\\\"trade_reasoning\\\",\\\"models\\\":{\\\"primary\\\":\\\"serv-nano\\\",\\\"secondary\\\":\\\"serv-swift\\\"},\\\"objections\\\":[\\\"step_0: The cited numerical thresholds are met by the visible evidence: 7d change is 186.85%, RSI14 is 92.91, and the thesis explicitly states $6.3B in 24h volume. No threshold is shown as unmet.\\\",\\\"step_1: The evidence is directionally consistent with the thesis's description of a strong upward move and parabolic rally. There is no contradiction in the visible trace.\\\",\\\"step_2: The thesis does not contradict itself: it identifies a blow-off-top setup, acknowledges the main counterargument, and explains that the short is sized modestly because of that uncertainty. The conclusion follows from the stated reasoning without unsupported leaps.\\\"],\\\"reasoning\\\":\\\"All critical steps adequately supported.\\\\n\\\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\\\",\\\"tier\\\":\\\"standard\\\",\\\"verdict\\\":\\\"UNCERTAIN\\\",\\\"verificationId\\\":\\\"sent_b982f4f28b0f4f03\\\"}\",\"body_hash\":\"b70758bd5592535c4f5634c7a7555f81b25890c107e724abd763790013e2fa1b\",\"conformance_suite\":\"https://github.com/babyblueviper1/preaction-governance-conformance\",\"independent_nodes\":[\"https://invinoveritas-castra.babyblueviper.workers.dev/verify\",\"https://babyblueviper1--2aba75da693711f185891607ee4eb77e.web.val.run\"],\"key_id\":\"6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7\",\"platform\":\"invinoveritas\",\"schema\":\"invinoveritas.witnessed_claim.v1\",\"source\":\"sentinel.thoughtproof.ai\",\"source_verification_note\":\"source is self-declared by the caller who submitted this body, NOT cryptographically verified by invinoveritas. This proof establishes WHEN this exact body was received and anchored, and WHAT it contains, byte-for-byte \u2014 it does not establish WHO actually authored it, and it carries no invinoveritas judgment about whether the content is sound.\",\"verifier_keys\":\"https://api.babyblueviper.com/.well-known/verifier-keys.json\",\"verifier_pubkey\":\"6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7\",\"verify_how\":\"Easiest: install the offline verifier above and recompute locally. Or POST this proof's signed `event` to verify_url (or an independent_node), OR run NIP-01 yourself: recompute the Nostr event id = sha256([0,pubkey,created_at,kind,tags,content]), verify the schnorr signature against verifier_pubkey. valid \u21d2 invinoveritas issued this, untampered. No trust required.\",\"verify_offline\":\"npm i invinoveritas-verify  \u00b7  pip install invinoveritas-verify  \u2014 recompute this proof on your own machine against verifier_pubkey; you never have to call us.\",\"verify_url\":\"https://api.babyblueviper.com/verify-proof\",\"witnessed_at\":1783408296}",
+        "sig": "a5193dd3a3350c7a7f3a0b07ffe7002561ab7625b1663ed3134c2d8bf003381c45b753dd0a23c9bf7237fa06919d41466819a51dc139f7e9390e254fa6e6847b"
+    },
+    "verify": "POST /verify-proof with the `event` object (or run NIP-01 verification yourself).",
+    "related": [],
+    "policy": "Notarization, not endorsement: we anchor the exact bytes you submitted and attribute them to the source you declared. We do not verify authorship and we do not judge the content \u2014 a separate /review call is the independent-judgment product."
+}
