@@ -1,0 +1,54 @@
+{
+    "status": "success",
+    "price_sats": 100,
+    "proof_payload": {
+        "schema": "invinoveritas.witnessed_claim.v1",
+        "platform": "invinoveritas",
+        "source": "sentinel.thoughtproof.ai",
+        "body": "{\"apiVersion\":\"sentinel-api-0.1.0\",\"artifactSchema\":\"sentinel.verdict.canonical.v1\",\"confidence\":100,\"evaluatedAt\":1783418290,\"mode\":\"trade_reasoning\",\"models\":{\"primary\":\"serv-nano\",\"secondary\":\"serv-swift\"},\"objections\":[\"step_0: The trace explicitly states the numerical values used in the thesis, and they support the cited thresholds and invalidation level.\",\"step_1: The evidence directly indicates a strong uptrend and price above both moving averages, matching the directional implications of the decision.\",\"step_2: The thesis is internally coherent: it cites overextended momentum and high RSI as the basis for fading, pairs that with a defined stop, and explicitly acknowledges the risk that momentum may continue.\"],\"reasoning\":\"All critical steps adequately supported.\\n\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\",\"tier\":\"standard\",\"verdict\":\"UNCERTAIN\",\"verificationId\":\"sent_8ca9b25158474364\"}",
+        "body_hash": "278899e6277a8486474dc83acf4084b928201367e09495625a4311d4d5d6161b",
+        "source_verification_note": "source is self-declared by the caller who submitted this body, NOT cryptographically verified by invinoveritas. This proof establishes WHEN this exact body was received and anchored, and WHAT it contains, byte-for-byte \u2014 it does not establish WHO actually authored it, and it carries no invinoveritas judgment about whether the content is sound.",
+        "witnessed_at": 1783419067,
+        "verify_url": "https://api.babyblueviper.com/verify-proof",
+        "verifier_pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "verify_offline": "npm i invinoveritas-verify  \u00b7  pip install invinoveritas-verify  \u2014 recompute this proof on your own machine against verifier_pubkey; you never have to call us.",
+        "independent_nodes": [
+            "https://invinoveritas-castra.babyblueviper.workers.dev/verify",
+            "https://babyblueviper1--2aba75da693711f185891607ee4eb77e.web.val.run"
+        ],
+        "verify_how": "Easiest: install the offline verifier above and recompute locally. Or POST this proof's signed `event` to verify_url (or an independent_node), OR run NIP-01 yourself: recompute the Nostr event id = sha256([0,pubkey,created_at,kind,tags,content]), verify the schnorr signature against verifier_pubkey. valid \u21d2 invinoveritas issued this, untampered. No trust required.",
+        "key_id": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "verifier_keys": "https://api.babyblueviper.com/.well-known/verifier-keys.json",
+        "conformance_suite": "https://github.com/babyblueviper1/preaction-governance-conformance"
+    },
+    "signature_type": "nostr_event",
+    "event": {
+        "id": "b71d81aeafcd09a160c6954b42576d6e455cf99d7b48a0c1ebe6db61d0c7d09c",
+        "pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "created_at": 1783419067,
+        "kind": 30078,
+        "tags": [
+            [
+                "d",
+                "invinoveritas-proof-proof-1783419067-8d6fc51e"
+            ],
+            [
+                "t",
+                "invinoveritas"
+            ],
+            [
+                "t",
+                "proof"
+            ],
+            [
+                "schema",
+                "invinoveritas.witnessed_claim.v1"
+            ]
+        ],
+        "content": "{\"body\":\"{\\\"apiVersion\\\":\\\"sentinel-api-0.1.0\\\",\\\"artifactSchema\\\":\\\"sentinel.verdict.canonical.v1\\\",\\\"confidence\\\":100,\\\"evaluatedAt\\\":1783418290,\\\"mode\\\":\\\"trade_reasoning\\\",\\\"models\\\":{\\\"primary\\\":\\\"serv-nano\\\",\\\"secondary\\\":\\\"serv-swift\\\"},\\\"objections\\\":[\\\"step_0: The trace explicitly states the numerical values used in the thesis, and they support the cited thresholds and invalidation level.\\\",\\\"step_1: The evidence directly indicates a strong uptrend and price above both moving averages, matching the directional implications of the decision.\\\",\\\"step_2: The thesis is internally coherent: it cites overextended momentum and high RSI as the basis for fading, pairs that with a defined stop, and explicitly acknowledges the risk that momentum may continue.\\\"],\\\"reasoning\\\":\\\"All critical steps adequately supported.\\\\n\\\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\\\",\\\"tier\\\":\\\"standard\\\",\\\"verdict\\\":\\\"UNCERTAIN\\\",\\\"verificationId\\\":\\\"sent_8ca9b25158474364\\\"}\",\"body_hash\":\"278899e6277a8486474dc83acf4084b928201367e09495625a4311d4d5d6161b\",\"conformance_suite\":\"https://github.com/babyblueviper1/preaction-governance-conformance\",\"independent_nodes\":[\"https://invinoveritas-castra.babyblueviper.workers.dev/verify\",\"https://babyblueviper1--2aba75da693711f185891607ee4eb77e.web.val.run\"],\"key_id\":\"6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7\",\"platform\":\"invinoveritas\",\"schema\":\"invinoveritas.witnessed_claim.v1\",\"source\":\"sentinel.thoughtproof.ai\",\"source_verification_note\":\"source is self-declared by the caller who submitted this body, NOT cryptographically verified by invinoveritas. This proof establishes WHEN this exact body was received and anchored, and WHAT it contains, byte-for-byte \u2014 it does not establish WHO actually authored it, and it carries no invinoveritas judgment about whether the content is sound.\",\"verifier_keys\":\"https://api.babyblueviper.com/.well-known/verifier-keys.json\",\"verifier_pubkey\":\"6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7\",\"verify_how\":\"Easiest: install the offline verifier above and recompute locally. Or POST this proof's signed `event` to verify_url (or an independent_node), OR run NIP-01 yourself: recompute the Nostr event id = sha256([0,pubkey,created_at,kind,tags,content]), verify the schnorr signature against verifier_pubkey. valid \u21d2 invinoveritas issued this, untampered. No trust required.\",\"verify_offline\":\"npm i invinoveritas-verify  \u00b7  pip install invinoveritas-verify  \u2014 recompute this proof on your own machine against verifier_pubkey; you never have to call us.\",\"verify_url\":\"https://api.babyblueviper.com/verify-proof\",\"witnessed_at\":1783419067}",
+        "sig": "5a78bb9599d7201f8a7dc0dc812a142edb031d4fe65efec045f108206c8f8eeb4615216b54044ebc1022a196fd81044b4fa27ac3cbfa506dcec472743ef7940c"
+    },
+    "verify": "POST /verify-proof with the `event` object (or run NIP-01 verification yourself).",
+    "related": [],
+    "policy": "Notarization, not endorsement: we anchor the exact bytes you submitted and attribute them to the source you declared. We do not verify authorship and we do not judge the content \u2014 a separate /review call is the independent-judgment product."
+}

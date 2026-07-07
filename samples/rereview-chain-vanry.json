@@ -1,0 +1,68 @@
+{
+  "note": "Clean single-pass re-review chain (VANRY blow-off-top fade). Generated end-to-end so verdicts/objections/chain are mutually consistent. Anchors the sequence for OBSERVABILITY — the resolve verdict is an INDEPENDENT fresh judgment on the risk-reduced revised plan, NOT a structural check that the revision refuted the objection. Objection-binding is the follow-on design (see the degenerate-to-UNCERTAIN discussion).",
+  "generatedAt": "2026-07-07T09:58:10.941Z",
+  "chainScheme": "sentinel.rereview.chain.v1",
+  "links": [
+    {
+      "step": "hold",
+      "parentBodyHash": null,
+      "verificationId": "sent_5453dbf280924bc5",
+      "verdict": "UNCERTAIN",
+      "body_hash": "0x684b9b2543974880deab72bbe5ea37a5a3ef2912552be3b6546cb56485740b7d",
+      "canonical_body": {
+        "artifactSchema": "sentinel.verdict.canonical.v1",
+        "verificationId": "sent_5453dbf280924bc5",
+        "apiVersion": "sentinel-api-0.1.0",
+        "tier": "standard",
+        "mode": "trade_reasoning",
+        "verdict": "UNCERTAIN",
+        "confidence": 100,
+        "objections": [
+          "step_0: The trace explicitly states the numerical values used in the thesis, and they meet the cited thresholds: 7-day change is 186.85% and RSI14 is 92.91. The threshold-based claim is therefore supported by the evidence.",
+          "step_1: The evidence explicitly labels the trend as strong_uptrend and shows price above both short and long SMAs, so the directional claims are consistent with the trace.",
+          "step_2: The thesis is internally coherent: it cites extreme upside momentum and overbought RSI, interprets that as exhaustion, and then proposes a mean-reversion short. No contradiction or unsupported factor appears in the visible reasoning."
+        ],
+        "reasoning": "All critical steps adequately supported.\n\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]",
+        "evaluatedAt": 1783418281,
+        "models": {
+          "primary": "serv-nano",
+          "secondary": "serv-swift"
+        }
+      },
+      "jcs": "{\"apiVersion\":\"sentinel-api-0.1.0\",\"artifactSchema\":\"sentinel.verdict.canonical.v1\",\"confidence\":100,\"evaluatedAt\":1783418281,\"mode\":\"trade_reasoning\",\"models\":{\"primary\":\"serv-nano\",\"secondary\":\"serv-swift\"},\"objections\":[\"step_0: The trace explicitly states the numerical values used in the thesis, and they meet the cited thresholds: 7-day change is 186.85% and RSI14 is 92.91. The threshold-based claim is therefore supported by the evidence.\",\"step_1: The evidence explicitly labels the trend as strong_uptrend and shows price above both short and long SMAs, so the directional claims are consistent with the trace.\",\"step_2: The thesis is internally coherent: it cites extreme upside momentum and overbought RSI, interprets that as exhaustion, and then proposes a mean-reversion short. No contradiction or unsupported factor appears in the visible reasoning.\"],\"reasoning\":\"All critical steps adequately supported.\\n\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\",\"tier\":\"standard\",\"verdict\":\"UNCERTAIN\",\"verificationId\":\"sent_5453dbf280924bc5\"}"
+    },
+    {
+      "step": "resolve",
+      "parentBodyHash": "0x684b9b2543974880deab72bbe5ea37a5a3ef2912552be3b6546cb56485740b7d",
+      "verificationId": "sent_8ca9b25158474364",
+      "verdict": "UNCERTAIN",
+      "body_hash": "0x278899e6277a8486474dc83acf4084b928201367e09495625a4311d4d5d6161b",
+      "canonical_body": {
+        "artifactSchema": "sentinel.verdict.canonical.v1",
+        "verificationId": "sent_8ca9b25158474364",
+        "apiVersion": "sentinel-api-0.1.0",
+        "tier": "standard",
+        "mode": "trade_reasoning",
+        "verdict": "UNCERTAIN",
+        "confidence": 100,
+        "objections": [
+          "step_0: The trace explicitly states the numerical values used in the thesis, and they support the cited thresholds and invalidation level.",
+          "step_1: The evidence directly indicates a strong uptrend and price above both moving averages, matching the directional implications of the decision.",
+          "step_2: The thesis is internally coherent: it cites overextended momentum and high RSI as the basis for fading, pairs that with a defined stop, and explicitly acknowledges the risk that momentum may continue."
+        ],
+        "reasoning": "All critical steps adequately supported.\n\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]",
+        "evaluatedAt": 1783418290,
+        "models": {
+          "primary": "serv-nano",
+          "secondary": "serv-swift"
+        }
+      },
+      "jcs": "{\"apiVersion\":\"sentinel-api-0.1.0\",\"artifactSchema\":\"sentinel.verdict.canonical.v1\",\"confidence\":100,\"evaluatedAt\":1783418290,\"mode\":\"trade_reasoning\",\"models\":{\"primary\":\"serv-nano\",\"secondary\":\"serv-swift\"},\"objections\":[\"step_0: The trace explicitly states the numerical values used in the thesis, and they support the cited thresholds and invalidation level.\",\"step_1: The evidence directly indicates a strong uptrend and price above both moving averages, matching the directional implications of the decision.\",\"step_2: The thesis is internally coherent: it cites overextended momentum and high RSI as the basis for fading, pairs that with a defined stop, and explicitly acknowledges the risk that momentum may continue.\"],\"reasoning\":\"All critical steps adequately supported.\\n\\n[sentinel-cascade primary_hold: primary=HOLD, secondary=ALLOW]\",\"tier\":\"standard\",\"verdict\":\"UNCERTAIN\",\"verificationId\":\"sent_8ca9b25158474364\"}",
+      "addressedObjections": [
+        "step_0: The trace explicitly states the numerical values used in the thesis, and they meet the cited thresholds: 7-day change is 186.85% and RSI14 is 92.91. The threshold-based claim is therefore supported by the evidence.",
+        "step_1: The evidence explicitly labels the trend as strong_uptrend and shows price above both short and long SMAs, so the directional claims are consistent with the trace.",
+        "step_2: The thesis is internally coherent: it cites extreme upside momentum and overbought RSI, interprets that as exhaustion, and then proposes a mean-reversion short. No contradiction or unsupported factor appears in the visible reasoning."
+      ]
+    }
+  ]
+}
