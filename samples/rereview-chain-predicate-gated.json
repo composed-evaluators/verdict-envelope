@@ -1,0 +1,60 @@
+{
+  "note": "Numeric-predicate-gated re-review chain. The resolve gate is a LITERAL BOOLEAN on structured data (revised value satisfies the hold-time predicate) — it cannot degenerate to UNCERTAIN because there is no judgment left. Honest boundary: the magnitude objection is predicate-gated (structurally prevented); the inferential-integrity objection is fresh-judgment-only (detectable, not prevented). Enforcement is marked per-objection, not one blanket level.",
+  "generatedAt": "2026-07-07T11:57:19.730Z",
+  "chainScheme": "sentinel.rereview.chain.v2-predicate",
+  "links": [
+    {
+      "step": "hold",
+      "parentBodyHash": null,
+      "verdict": "BLOCK",
+      "objections": [
+        {
+          "kind": "magnitude",
+          "enforcement": "predicate-gated",
+          "predicate": {
+            "kind": "magnitude",
+            "field": "move_pct",
+            "op": "approx",
+            "value": 41,
+            "tolerancePp": 10,
+            "claimedValue": 186,
+            "actualValue": 41
+          },
+          "evidenceLine": "structural_fact: verified 7d move ≈ +41.0%; thesis claims \"+186% parabolic rally\"."
+        },
+        {
+          "kind": "inferential_integrity",
+          "reasoning": "Thesis invokes 'climactic volume exhaustion' not grounded in the cited data.",
+          "enforcement": "fresh-judgment-only"
+        }
+      ],
+      "body_hash": "0x4a972b315c49a94fe56186d28ac1ef90470a4efdc3021cf5963ca385d84c9b8f",
+      "jcs": "{\"objections\":[{\"enforcement\":\"predicate-gated\",\"evidenceLine\":\"structural_fact: verified 7d move ≈ +41.0%; thesis claims \\\"+186% parabolic rally\\\".\",\"kind\":\"magnitude\",\"predicate\":{\"actualValue\":41,\"claimedValue\":186,\"field\":\"move_pct\",\"kind\":\"magnitude\",\"op\":\"approx\",\"tolerancePp\":10,\"value\":41}},{\"enforcement\":\"fresh-judgment-only\",\"kind\":\"inferential_integrity\",\"reasoning\":\"Thesis invokes 'climactic volume exhaustion' not grounded in the cited data.\"}],\"parentBodyHash\":null,\"step\":\"hold\",\"verdict\":\"BLOCK\"}"
+    },
+    {
+      "step": "resolve",
+      "parentBodyHash": "0x4a972b315c49a94fe56186d28ac1ef90470a4efdc3021cf5963ca385d84c9b8f",
+      "objectionGate": {
+        "kind": "magnitude",
+        "enforcement": "predicate-gated",
+        "predicate": {
+          "field": "move_pct",
+          "op": "approx",
+          "value": 41,
+          "tolerancePp": 10
+        },
+        "revisedValue": 44,
+        "satisfied": true,
+        "check": "|44 - 41| <= 10 => true"
+      },
+      "fuzzyObjectionStillJudged": {
+        "kind": "inferential_integrity",
+        "enforcement": "fresh-judgment-only",
+        "note": "Not objection-bound; overall Sentinel verdict still judges this fresh."
+      },
+      "verdict": "ALLOW (magnitude objection provably resolved)",
+      "body_hash": "0x76089af3cb587b3b3f19b702ff0663efa6d6819b4fce674f636999ea5f2103e3",
+      "jcs": "{\"fuzzyObjectionStillJudged\":{\"enforcement\":\"fresh-judgment-only\",\"kind\":\"inferential_integrity\",\"note\":\"Not objection-bound; overall Sentinel verdict still judges this fresh.\"},\"objectionGate\":{\"check\":\"|44 - 41| <= 10 => true\",\"enforcement\":\"predicate-gated\",\"kind\":\"magnitude\",\"predicate\":{\"field\":\"move_pct\",\"op\":\"approx\",\"tolerancePp\":10,\"value\":41},\"revisedValue\":44,\"satisfied\":true},\"parentBodyHash\":\"0x4a972b315c49a94fe56186d28ac1ef90470a4efdc3021cf5963ca385d84c9b8f\",\"step\":\"resolve\",\"verdict\":\"ALLOW (magnitude objection provably resolved)\"}"
+    }
+  ]
+}

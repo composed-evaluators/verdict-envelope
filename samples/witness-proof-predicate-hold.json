@@ -1,0 +1,54 @@
+{
+    "status": "success",
+    "price_sats": 100,
+    "proof_payload": {
+        "schema": "invinoveritas.witnessed_claim.v1",
+        "platform": "invinoveritas",
+        "source": "sentinel.thoughtproof.ai",
+        "body": "{\"objections\":[{\"enforcement\":\"predicate-gated\",\"evidenceLine\":\"structural_fact: verified 7d move \u2248 +41.0%; thesis claims \\\"+186% parabolic rally\\\".\",\"kind\":\"magnitude\",\"predicate\":{\"actualValue\":41,\"claimedValue\":186,\"field\":\"move_pct\",\"kind\":\"magnitude\",\"op\":\"approx\",\"tolerancePp\":10,\"value\":41}},{\"enforcement\":\"fresh-judgment-only\",\"kind\":\"inferential_integrity\",\"reasoning\":\"Thesis invokes 'climactic volume exhaustion' not grounded in the cited data.\"}],\"parentBodyHash\":null,\"step\":\"hold\",\"verdict\":\"BLOCK\"}",
+        "body_hash": "4a972b315c49a94fe56186d28ac1ef90470a4efdc3021cf5963ca385d84c9b8f",
+        "source_verification_note": "source is self-declared by the caller who submitted this body, NOT cryptographically verified by invinoveritas. This proof establishes WHEN this exact body was received and anchored, and WHAT it contains, byte-for-byte \u2014 it does not establish WHO actually authored it, and it carries no invinoveritas judgment about whether the content is sound.",
+        "witnessed_at": 1783426268,
+        "verify_url": "https://api.babyblueviper.com/verify-proof",
+        "verifier_pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "verify_offline": "npm i invinoveritas-verify  \u00b7  pip install invinoveritas-verify  \u2014 recompute this proof on your own machine against verifier_pubkey; you never have to call us.",
+        "independent_nodes": [
+            "https://invinoveritas-castra.babyblueviper.workers.dev/verify",
+            "https://babyblueviper1--2aba75da693711f185891607ee4eb77e.web.val.run"
+        ],
+        "verify_how": "Easiest: install the offline verifier above and recompute locally. Or POST this proof's signed `event` to verify_url (or an independent_node), OR run NIP-01 yourself: recompute the Nostr event id = sha256([0,pubkey,created_at,kind,tags,content]), verify the schnorr signature against verifier_pubkey. valid \u21d2 invinoveritas issued this, untampered. No trust required.",
+        "key_id": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "verifier_keys": "https://api.babyblueviper.com/.well-known/verifier-keys.json",
+        "conformance_suite": "https://github.com/babyblueviper1/preaction-governance-conformance"
+    },
+    "signature_type": "nostr_event",
+    "event": {
+        "id": "685c8282aec2a852012147e7617cf26de41a894f185463518beefe8b7f16fd52",
+        "pubkey": "6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7",
+        "created_at": 1783426268,
+        "kind": 30078,
+        "tags": [
+            [
+                "d",
+                "invinoveritas-proof-proof-1783426268-314d1613"
+            ],
+            [
+                "t",
+                "invinoveritas"
+            ],
+            [
+                "t",
+                "proof"
+            ],
+            [
+                "schema",
+                "invinoveritas.witnessed_claim.v1"
+            ]
+        ],
+        "content": "{\"body\":\"{\\\"objections\\\":[{\\\"enforcement\\\":\\\"predicate-gated\\\",\\\"evidenceLine\\\":\\\"structural_fact: verified 7d move \u2248 +41.0%; thesis claims \\\\\\\"+186% parabolic rally\\\\\\\".\\\",\\\"kind\\\":\\\"magnitude\\\",\\\"predicate\\\":{\\\"actualValue\\\":41,\\\"claimedValue\\\":186,\\\"field\\\":\\\"move_pct\\\",\\\"kind\\\":\\\"magnitude\\\",\\\"op\\\":\\\"approx\\\",\\\"tolerancePp\\\":10,\\\"value\\\":41}},{\\\"enforcement\\\":\\\"fresh-judgment-only\\\",\\\"kind\\\":\\\"inferential_integrity\\\",\\\"reasoning\\\":\\\"Thesis invokes 'climactic volume exhaustion' not grounded in the cited data.\\\"}],\\\"parentBodyHash\\\":null,\\\"step\\\":\\\"hold\\\",\\\"verdict\\\":\\\"BLOCK\\\"}\",\"body_hash\":\"4a972b315c49a94fe56186d28ac1ef90470a4efdc3021cf5963ca385d84c9b8f\",\"conformance_suite\":\"https://github.com/babyblueviper1/preaction-governance-conformance\",\"independent_nodes\":[\"https://invinoveritas-castra.babyblueviper.workers.dev/verify\",\"https://babyblueviper1--2aba75da693711f185891607ee4eb77e.web.val.run\"],\"key_id\":\"6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7\",\"platform\":\"invinoveritas\",\"schema\":\"invinoveritas.witnessed_claim.v1\",\"source\":\"sentinel.thoughtproof.ai\",\"source_verification_note\":\"source is self-declared by the caller who submitted this body, NOT cryptographically verified by invinoveritas. This proof establishes WHEN this exact body was received and anchored, and WHAT it contains, byte-for-byte \u2014 it does not establish WHO actually authored it, and it carries no invinoveritas judgment about whether the content is sound.\",\"verifier_keys\":\"https://api.babyblueviper.com/.well-known/verifier-keys.json\",\"verifier_pubkey\":\"6786e18a864893a900bd9858e650f67ccc3513f248fed374b591e2ff6922fbb7\",\"verify_how\":\"Easiest: install the offline verifier above and recompute locally. Or POST this proof's signed `event` to verify_url (or an independent_node), OR run NIP-01 yourself: recompute the Nostr event id = sha256([0,pubkey,created_at,kind,tags,content]), verify the schnorr signature against verifier_pubkey. valid \u21d2 invinoveritas issued this, untampered. No trust required.\",\"verify_offline\":\"npm i invinoveritas-verify  \u00b7  pip install invinoveritas-verify  \u2014 recompute this proof on your own machine against verifier_pubkey; you never have to call us.\",\"verify_url\":\"https://api.babyblueviper.com/verify-proof\",\"witnessed_at\":1783426268}",
+        "sig": "3d6d31a387c3ddebcc23d3592a4d1fe631f537cbf546ddf8d5a7c18fbe2fb8cf32eb0c91b7e91748f203f8edccd023efc868e19f5f736f0de65f8382f00ebc13"
+    },
+    "verify": "POST /verify-proof with the `event` object (or run NIP-01 verification yourself).",
+    "related": [],
+    "policy": "Notarization, not endorsement: we anchor the exact bytes you submitted and attribute them to the source you declared. We do not verify authorship and we do not judge the content \u2014 a separate /review call is the independent-judgment product."
+}
